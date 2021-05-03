@@ -75,12 +75,20 @@ const secondUl = $('#second');
 const thirdUl = $('#third');
 
 function printCar(array, target){
-  let html = `
-    <li>
-      ${array};
-    </li>
+  array.forEach((car) => {
+    let {marca, modello , alimentazione} = car;
+    let html = `
+      <li>
+        Marca: ${marca}<br>
+        Modello: ${modello}<br>
+        Alimentazione: ${alimentazione}<br>
+      </li><br>
   `;
+
+  
   target.append(html);
+  })
+  
 }
 
 printCar(arr1, firstUl);
